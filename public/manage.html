@@ -7,9 +7,9 @@
       * { box-sizing: border-box; margin: 0; padding: 0; }
 
       body {
-        background: #f0f0f0; margin: 0;
+        background: #ffffff; margin: 0;
         display: flex; flex-direction: column; align-items: center;
-        padding: 40px 20px 60px;
+        padding: 0;
         font-family: 'Brother1816', Arial, sans-serif; min-height: 100vh;
       }
 
@@ -20,14 +20,10 @@
         justify-content: flex-start;
         min-height: 100vh;
       }
-      body.gate-mode #access-box {
-        padding: 28px 36px 40px;
-        min-height: 100vh;
-        width: 100%; max-width: 600px;
-      }
 
       /* ── Access gate ── */
-      #access-box { display: flex; flex-direction: column; width: 100%; max-width: 600px; }
+      #access-box { display: flex; flex-direction: column; width: 100%; max-width: 600px;
+        padding: 28px 36px 40px; min-height: 100vh; }
       #gateTopBar  { display: flex; justify-content: space-between; align-items: center; }
       #gateLogo    { width: 110px; }
       #gateLogo img { width: 100%; display: block; }
@@ -308,7 +304,6 @@
 
     <script>
       const ACCESS_CODE = '1234';
-      document.body.classList.add('gate-mode');
       let peopleData = null;
 
       let kpValue = '';
@@ -329,7 +324,6 @@
           document.getElementById('access-box').style.display = 'none';
           document.getElementById('logo').style.display = 'block';
           document.getElementById('managePanel').style.display = 'block';
-          document.body.classList.remove('gate-mode');
           document.body.style.background = '#f0f0f0';
           document.body.style.padding = '40px 20px 60px';
           loadPeople();
