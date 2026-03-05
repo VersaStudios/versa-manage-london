@@ -1,0 +1,16 @@
+{
+  "name": "versa-manage-london",
+  "version": "1.0.0",
+  "description": "Versa Manage London — people & project management",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-http-proxy": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
